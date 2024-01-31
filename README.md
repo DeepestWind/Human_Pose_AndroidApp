@@ -1,69 +1,26 @@
-# ML Kit Vision Quickstart Sample App
+# 辅助运动计数APP
 
-## Introduction
+## 介绍
 
-This ML Kit Quickstart app demonstrates how to use and integrate various vision based ML Kit features into your app.
+基于Google的ML Kit库增加运动姿势计数功能的Android应用
 
-## Feature List
+## 主要功能
+* [Pose Detection](https://developers.google.com/ml-kit/vision/pose-detection/android) - 实时人体姿态估计.
 
-Features that are included in this Quickstart app:
-* [Object Detection](https://developers.google.com/ml-kit/vision/object-detection/android) - Detect, track, and classify objects in real time and static images
-* [Face Detection](https://developers.google.com/ml-kit/vision/face-detection/android) - Detect faces in real time and static images
-* [Text Recognition](https://developers.google.com/ml-kit/vision/text-recognition/android) - Recognize text in real time and static images
-* [Barcode Scanning](https://developers.google.com/ml-kit/vision/barcode-scanning/android)  - Scan barcodes in real time and static images
-* [Image Labeling](https://developers.google.com/ml-kit/vision/image-labeling/android) - Label images in real time and static images
-* [Custom Image Labeling - Birds](https://developers.google.com/ml-kit/vision/image-labeling/custom-models/android) - Label images of birds with a custom TensorFlow Lite model.
-* [Pose Detection](https://developers.google.com/ml-kit/vision/pose-detection/android) - Detect the position of the human body in real time.
-* [Selfie Segmentation](https://developers.google.com/ml-kit/vision/selfie-segmentation/android) - Segment people from the background in real time.
 
-<img src="../screenshots/quickstart-picker.png" width="220"/> <img src="../screenshots/quickstart-image-labeling.png" width="220"/> <img src="../screenshots/quickstart-object-detection.png" width="220"/> <img src="../screenshots/quickstart-pose-detection.png" width="220"/>
+## 使用方式
+在Android设备上下载后打开即可进入主界面
+- 选择运动模式后将设备放置固定位置后即可开始计数
+- 目前支持深蹲，仰卧起坐，俯卧撑三种模式，万能模式包含以上三种数据集，可能会对准确度造成影响。
 
-## Getting Started
 
-* Run the sample code on your Android device or emulator
-* Try extending the code to add new features and functionality
-
-## How to use the app
-
-This app supports three usage scenarios: Live Camera, Static Image, and CameraX enabled live camera.
-
-### Live Camera scenario
-It uses the camera preview as input and contains these API workflows: Object detection & tracking, Face Detection, Text Recognition, Barcode Scanning, Image Labeling, and Pose Detection. There's also a settings page that allows you to configure several options:
-* Camera
-    * Preview size - Specify the preview size of rear/front camera manually (Default size is chosen appropriately based on screen size)
-    * Enable live viewport - Toggle between blocking camera preview by API processing and result rendering or not
-* Object detection / Custom Object Detection
-    * Enable multiple objects -- Enable multiple objects to be detected at once
-    * Enable classification -- Enable classification for each detected object
-* Face Detection
-    * Landmark mode -- Toggle between showing no or all facial landmarks
-    * Contour mode -- Toggle between showing no or all contours
-    * Classification mode -- Toggle between showing no or all classifications (smiling, eyes open/closed)
-    * Performance mode -- Toggle between two operating modes (Fast or Accurate)
-    * Face tracking -- Enable or disable face tracking
-    * Minimum face size -- Choose the proportion of the head width to the image width
-* Pose Detection
-    * Performance mode -- Allows you to switch between "Fast" and "Accurate" operation mode
-    * Show in-frame likelihood -- Displays InFrameLikelihood score for each landmark
-    * Visualize z value -- Uses different colors to indicate z difference (red: smaller z, blue: larger z)
-    * Rescale z value for visualization -- Maps the smallest z value to the most red and the largest z value to the most blue. This makes z difference more obvious
-    * Run classification -- Classify squat and pushup poses. Count reps in streaming mode.
-* Selfie Segmentation
-    * Enable raw size mask -- Asks the segmenter to return the raw size mask which matches the model output size.
-
-### Static Image scenario
-The static image scenario is identical to the live camera scenario, but instead relies on images fed into the app through the gallery.
-
-### CameraX Live Preview scenario
-The CameraX live preview scenario is very similar to the native live camera scenario, but instead relies on CameraX live preview. Note: CameraX is only supported on API level 21+.
-
-## Support
+## 支持
 
 * [Documentation](https://developers.google.com/ml-kit/guides)
 * [API Reference](https://developers.google.com/ml-kit/reference/android)
 * [Stack Overflow](https://stackoverflow.com/questions/tagged/google-mlkit)
 
-## License
+## 许可证
 
 Copyright 2020 Google, Inc.
 
